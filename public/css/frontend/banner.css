@@ -1,0 +1,29 @@
+.banner {
+    display: flex;
+    align-items: center;
+    border-color: #f0f0f0;
+    background-color: #d9ddd2;
+    border-bottom: 2px solid #bcc1b5;
+    height: 88px;
+}
+
+.banner a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    text-decoration: none;
+    height: 100%;
+}
+
+.banner a:hover {
+    background-color: #6f7381;
+}
+
+.logo{
+    height:80px;
+    margin-right: 10px;
+}
