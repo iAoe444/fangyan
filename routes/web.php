@@ -15,6 +15,7 @@
 //     return view('welcome');
 // });
 
+Route::get('/',['uses'=>'FrontEndController@index']);
 Route::get('index',['uses'=>'FrontEndController@index']);
 Route::get('dialectculture',['uses'=>'FrontEndController@dialectculture']);
 Route::get('homelocation',['uses'=>'FrontEndController@homelocation']);
