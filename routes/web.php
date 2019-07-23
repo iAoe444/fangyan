@@ -18,7 +18,15 @@
 Route::get('/',['uses'=>'FrontEndController@index']);
 Route::get('index',['uses'=>'FrontEndController@index']);
 Route::get('dialectculture',['uses'=>'FrontEndController@dialectculture']);
+Route::group(['prefix' => 'dialectculture'],function(){
+    Route::get('article',['uses'=>'FrontEndController@article']);
+    Route::get('wxarticle',['uses'=>'FrontEndController@wxarticle']);
+    Route::get('image',['uses'=>'FrontEndController@image']);
+});
 Route::get('homelocation',['uses'=>'FrontEndController@homelocation']);
 Route::get('lifescene',['uses'=>'FrontEndController@lifescene']);
 Route::get('dialecttest',['uses'=>'FrontEndController@dialecttest']);
 Route::get('aboutus',['uses'=>'FrontEndController@aboutus']);
+Route::group(['prefix' => 'articleoperation'],function(){
+    Route::get('add',['uses'=>'ArticleController@addArticle']);
+});

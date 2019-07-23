@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <title>乡音故事机 - @yield('title')</title>
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" />
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/banner.css') }}">
     @yield('css')
 </head>
@@ -27,8 +27,7 @@
 
     <script type="text/javascript">
         var tagName = @yield('tag');
-        var tag = document.getElementById(tagName);
-        tag.style.backgroundColor = "#6f7381";
+        $("#"+tagName).css('background','#6f7381');
     </script>
 
 </body>
