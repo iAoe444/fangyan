@@ -1,11 +1,15 @@
 @extends('layout')
 
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/dialectculture.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/dialect_culture.css') }}">
 @stop
 
 @section('title')
-    方言文化
+方言文化
+@stop
+
+@section('tag')
+'dialect_culture'
 @stop
 
 @section('content')

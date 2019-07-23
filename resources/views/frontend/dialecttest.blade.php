@@ -5,14 +5,14 @@
 @stop
 
 @section('title')
-首页
+方言测试
 @stop
 
 @section('tag')
-'index'
+'dialect_test'
 @stop
 
 @section('content')
-<div id="zoomImage" class="zoomImage" style="background-image:url({{ asset('images/index.png') }})"></div>
+<div id="zoomImage" class="zoomImage" style="background-image:url({{ asset('images/dialect_test.png') }})"></div>
 <script type="text/javascript" src="{{ asset('js/zoomImage.js') }}"></script>
 @stop

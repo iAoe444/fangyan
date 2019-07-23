@@ -17,3 +17,7 @@
 
 Route::get('index',['uses'=>'FrontEndController@index']);
 Route::get('dialectculture',['uses'=>'FrontEndController@dialectculture']);
+Route::get('homelocation',['uses'=>'FrontEndController@homelocation']);
+Route::get('lifescene',['uses'=>'FrontEndController@lifescene']);
+Route::get('dialecttest',['uses'=>'FrontEndController@dialecttest']);
+Route::get('aboutus',['uses'=>'FrontEndController@aboutus']);

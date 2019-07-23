@@ -1,11 +1,8 @@
-.html {
+.item_area {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
-}
-
-.item_area {
 	margin-top: 100px;
 }
 
@@ -59,5 +56,5 @@
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 1; /*¹æ¶¨×î¶àÏÔÊ¾Á½ÐÐ*/
+	-webkit-line-clamp: 1; /*è§„å®šæœ€å¤šæ˜¾ç¤ºä¸¤è¡Œ*/
 }
