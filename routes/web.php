@@ -27,6 +27,15 @@ Route::get('homelocation',['uses'=>'FrontEndController@homelocation']);
 Route::get('lifescene',['uses'=>'FrontEndController@lifescene']);
 Route::get('dialecttest',['uses'=>'FrontEndController@dialecttest']);
 Route::get('aboutus',['uses'=>'FrontEndController@aboutus']);
+
 Route::group(['prefix' => 'articleoperation'],function(){
     Route::get('add',['uses'=>'ArticleController@addArticle']);
+});
+
+Route::group(['prefix' => 'sceneoperation'],function(){
+    Route::get('add',['uses'=>'LifeSceneController@addScene']);
+});
+
+Route::group(['prefix' => 'feedbackoperation'],function(){
+    Route::post('commit',['uses'=>'FeedBackController@addFeedback']);
 });

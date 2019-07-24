@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\LifeScene;
 
 class FrontEndController extends Controller
 {
@@ -25,9 +26,11 @@ class FrontEndController extends Controller
         return view('frontend.homelocation');
     }
 
+    //生活场景
     public function lifescene()
     {
-        return view('frontend.lifescene');
+        $scenes = LifeScene::all();
+        return view('frontend.lifescene')->with('scenes',$scenes);
     }
 
     public function dialecttest()
@@ -42,6 +45,7 @@ class FrontEndController extends Controller
 
     public function article(Request $request)
     {
+        // 获取微信文章的url，然后把url放在iframe里面
         if($request->has('wxUrl')){
             $wxUrl = $request->input('wxUrl');
             return view('frontend.article',['wxUrl' => $wxUrl]);

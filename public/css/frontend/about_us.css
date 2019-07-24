@@ -47,9 +47,17 @@
 .contact_right span{
 	font-size: 15px;
 	margin-bottom: 20px;
-	margin-top: 12px;
+
 }
 .textarea{
 	width:300px;
-	height: 150px;
+	height: 140px;
+	font-size: 17px;
+}
+
+.btn{
+	margin-top: 10px;
+	background: #6f7381;
+	color: white;
+	height: 30px;
 }

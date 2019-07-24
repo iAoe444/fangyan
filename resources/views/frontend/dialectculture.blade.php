@@ -15,10 +15,10 @@
 <div class="item_area">
     @foreach($articles as $article)
     <div class="item">
-        <a href="{{ url('dialectculture/article?wxUrl=') }}{{ $article->url }}"><img src="images/article.png"> </a>
+        <a href="{{ url('dialectculture/article?wxUrl=') }}{{ $article->url }}"><img src="{{ asset($article->img_url) }}"> </a>
         <div class="title_text">
             <div>
-                <a class="title" href="{{ url('dialectculture/article') }}">{{ $article->title }}</a>
+                <a class="title" href="{{ url('dialectculture/article?wxUrl=') }}{{ $article->url }}">{{ $article->title }}</a>
             </div>
             <div class="desc">{{ $article->desc }}</div>
         </div>

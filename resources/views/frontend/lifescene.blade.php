@@ -18,17 +18,15 @@
         <span class="title_en">DAILY LIFE</span> <span class="title_ch">日常情境</span>
     </div>
     <div class="scene_area" id="scene_area">
-        <div id="scene1" class="scene" onclick="bofang(this.id)">
-            <img alt="当你和朋友聚会时" src="{{ asset('images/scene/friends.png') }}">
-            <div class="mask">当你和朋友聚会时</div>
+        @foreach($scenes as $scene)
+        <div id="{{ asset($scene->video_url) }}" class="scene" onclick="bofang(this.id)">
+            <img alt="{{ $scene->title }}" src="{{ asset($scene->img_url) }}">
+            <div class="mask">{{ $scene->title }}</div>
         </div>
-        <div id="scene3" class="scene" onclick="bofang(this.id)">
-            <img alt="当你陪伴孩子时" src="images/scene/kids.png">
-            <div class="mask">当你陪伴孩子时</div>
-        </div>
+        @endforeach
     </div>
     <div id="video_area" style="display: none;" class="video_area">
-        <img src="images/close.png" style="height: 30px;" class="close" onclick="zanting()">
+        <img src="{{ asset('images/close.png') }}" style="height: 30px;" class="close" onclick="zanting()">
         <video id="video" width="800px">
             <source id="source" type="video/mp4" />
             你的浏览器暂不支持播放该视频，请换个浏览器试试
@@ -48,7 +46,7 @@
     }
 
     function bofang(id) {
-        video.src = "images/scene/" + id + ".mp4";
+        video.src = id;
         video.currentTime = 0;
         video.play();
         scene_area.style.display = "none";

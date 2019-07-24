@@ -34,11 +34,24 @@
                     <img src="{{ asset('images/about_us/location.png') }}"> <span>广东技术师范大学</span>
                 </div>
             </div>
-            <div class="contact_right">
+            <form class="contact_right" method="post" action="{{ url('feedbackoperation/commit') }}">
+                @csrf
                 <span>感谢您的留言</span>
-                <textarea class="textarea"></textarea>
-            </div>
+                <textarea name="feedback" class="textarea"></textarea>
+                <button class="btn"> 提交 </button>
+            </form>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    @if (isset($success))
+        var success = {{ $success }}
+        console.log(success);
+        if(success==1){
+            alert("你的留言我们已经收到，感谢你的留言");
+        }else{
+            alert("留言失败")
+        }
+    @endif
+</script>
 @stop
