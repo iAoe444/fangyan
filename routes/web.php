@@ -37,5 +37,5 @@ Route::group(['prefix' => 'sceneoperation'],function(){
 });
 
 Route::group(['prefix' => 'feedbackoperation'],function(){
-    Route::post('commit',['uses'=>'FeedBackController@addFeedback']);
+    Route::post('commit',['uses'=>'FeedbackController@addFeedback']);
 });
