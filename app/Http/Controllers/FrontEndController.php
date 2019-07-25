@@ -8,6 +8,11 @@ use App\LifeScene;
 
 class FrontEndController extends Controller
 {
+    public function welcome()
+    {
+        return redirect('/index');
+    }
+
     public function index()
     {
         return view('frontend.index');

@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/',['uses'=>'FrontEndController@index']);
+Route::get('/',['uses'=>'FrontEndController@welcome']);
 Route::get('index',['uses'=>'FrontEndController@index']);
 Route::get('dialectculture',['uses'=>'FrontEndController@dialectculture']);
 Route::group(['prefix' => 'dialectculture'],function(){
@@ -38,4 +38,24 @@ Route::group(['prefix' => 'sceneoperation'],function(){
 
 Route::group(['prefix' => 'feedbackoperation'],function(){
     Route::post('commit',['uses'=>'FeedbackController@addFeedback']);
+});
+
+Route::group(['prefix' => 'manage'],function(){
+    Route::get('/',['uses'=>'ManageController@index']);
+    Route::get('article',['uses'=>'ManageController@article']);
+    Route::get('feedback',['uses'=>'ManageController@feedback']);
+    Route::get('scene',['uses'=>'ManageController@scene']);
+    Route::group(['prefix' => 'article'],function(){
+        Route::any('create',['uses'=>'ArticleController@create']);
+        Route::get('delete',['uses'=>'ArticleController@delete']);
+        Route::any('update',['uses'=>'ArticleController@update']);
+    });
+    Route::group(['prefix' => 'feedback'],function(){
+        Route::get('delete',['uses'=>'FeedbackController@delete']);
+    });
+    Route::group(['prefix' => 'scene'],function(){
+        Route::any('create',['uses'=>'LifeSceneController@create']);
+        Route::get('delete',['uses'=>'LifeSceneController@delete']);
+        Route::any('update',['uses'=>'LifeSceneController@update']);
+    });
 });

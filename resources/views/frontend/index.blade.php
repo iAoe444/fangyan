@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('common.frontend')
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/index.css') }}">

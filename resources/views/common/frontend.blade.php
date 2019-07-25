@@ -14,7 +14,7 @@
 
 <body>
     <div class="banner" id="banner">
-        <img class="logo" src="{{ asset('images/logo.png') }}">
+        <a href="{{ url('manage') }}"><img class="logo" src="{{ asset('images/logo.png') }}"></a>
         <a id="index" href="{{ url('index') }}">回到首页</a>
         <a id="home_location" href="{{ url('homelocation') }}">家乡位置</a>
         <a id="life_scene" href="{{ url('lifescene') }}">生活场景</a>

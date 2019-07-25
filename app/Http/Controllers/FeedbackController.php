@@ -19,4 +19,15 @@ class FeedbackController extends Controller
             return view('frontend.aboutus')->with('success',false);
         }
     }
+
+    public function delete(Request $request)
+    {
+        $id = $request->input('id');
+        $feedback = Feedback::find($id);
+        if ($feedback->delete()) {
+            return redirect('manage/feedback')->with('success', '删除成功-' . $id);
+        } else {
+            return redirect('manage/feedback')->with('success', '删除失败-' . $id);
+        }
+    }
 }
