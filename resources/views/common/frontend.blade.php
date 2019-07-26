@@ -12,7 +12,7 @@
     @yield('css')
 </head>
 
-<body>
+<body background="{{ asset('images/background.png') }}">
     <div class="banner" id="banner">
         <a href="{{ url('manage') }}"><img class="logo" src="{{ asset('images/logo.png') }}"></a>
         <a id="index" href="{{ url('index') }}">回到首页</a>
@@ -27,7 +27,7 @@
 
     <script type="text/javascript">
         var tagName = @yield('tag');
-        $("#"+tagName).css('background','#6f7381');
+        $("#"+tagName).css('background','#d1a8d9');
     </script>
 
 </body>

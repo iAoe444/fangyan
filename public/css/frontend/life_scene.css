@@ -15,14 +15,14 @@
 
 .title_en {
 	font-size: 30px;
-	color: #6f7381;
+	color: white;
 	font-weight: bold;
 	margin: 0px;
 }
 
 .title_ch {
 	font-size: 17px;
-	color: #b4b3b3;
+	color: #ffffffc7;
 	margin-top: 10px;
 }
 
@@ -34,7 +34,7 @@
 	content: "";
 	width: 15px;
 	height: 0px;
-	border: 0.5px solid #b4b3b3;
+	border: 0.5px solid #ffffff6b;
 }
 
 .title_ch:after {
@@ -45,7 +45,7 @@
 	content: "";
 	width: 15px;
 	height: 0px;
-	border: 0.5px solid #b4b3b3;
+	border: 0.5px solid #ffffff6b;
 }
 
 .scene_area {

@@ -16,7 +16,7 @@
 <div class="map">
     <div class="dituContent" id="dituContent"></div>
     <div class="banner_text">
-        <h2>欢迎来到顺德</h2>
+        <div class="title">欢迎来到顺德</div>
         <p class="desc">顺德区是佛山市五个行政辖区之一。位于广东省的南部，珠江三角洲平原中部，由江河冲积而成的河口三角洲平原；广佛同城的西南边界、广佛肇经济圈的南部，是佛山市与广州市联系的重要核心区域之一。</p>
     </div>
 </div>

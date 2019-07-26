@@ -8,8 +8,8 @@ body {
     display: flex;
     align-items: center;
     border-color: #f0f0f0;
-    background-color: #d9ddd2;
-    border-bottom: 2px solid #bcc1b5;
+    background-color: #a68ff8;
+    border-bottom: 2px solid #ab91f4;
     height: 80px;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .banner a:hover {
-    background-color: #6f7381;
+    background-color: #d1a8d9;
 }
 
 .logo{
