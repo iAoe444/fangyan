@@ -75,15 +75,14 @@ class FrontEndController extends Controller
             
             //用来获取高度传递给iframe的
             $appendMsg = "
-            <script type=\"text/javascript\">
-                    document.addEventListener('DOMContentLoaded', function () {
-                    var tbody = document.body
-                    var width = tbody.clientWidth
-                    var height = tbody.clientHeight
-                    document.getElementById(\"js_pc_qr_code_img\").src=\"2323\"
-                    window.parent.postMessage({ height: height, width: width }, '*')
-                }, false)
-                
+            <iframe id=\"c_iframe\"  height=\"0\" width=\"0\"  src=\"http://lab.iaoe.xyz/fanyan/public/agent.html\" style=\"display:none\" ></iframe>
+                <script type=\"text/javascript\">
+                (function autoHeight(){
+                var b_width = Math.max(document.body.scrollWidth,document.body.clientWidth);
+                var b_height = Math.max(document.body.scrollHeight,document.body.clientHeight);
+                var c_iframe = document.getElementById(\"c_iframe\");
+                c_iframe.src = c_iframe.src + \"#\" + b_width + \"|\" + b_height;  // 这里通过hash传递b.htm的宽高
+                })();
             </script>";
             $html = $html . $appendMsg;
     
