@@ -14,14 +14,15 @@
 
 @section('content')
 <div class="html">
-    <div style="margin-top: 100px">
-        <div class="banner_text">
+    <h1 class="about_us_ch">关 于 我 们</h1>
+    <div class="about_us_area">
+        <!-- <div class="banner_text">
             <div class="left_rect"></div>
             <div class="text">
                 <div class="text_ch">关于我们</div>
                 <div class="text_en">CONTACT US</div>
             </div>
-        </div>
+        </div> -->
         <div class="contact_area">
             <div class="contact_left">
                 <div class="contact">

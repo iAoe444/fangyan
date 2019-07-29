@@ -9,7 +9,7 @@
 
         <!-- 自定义内容区域 -->
         <div class="panel panel-default">
-            <div class="panel-heading">更新文章</div>
+            <div class="panel-heading">更新方言文化</div>
             @include('manage.article.form')
         </div>
 

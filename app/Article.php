@@ -10,7 +10,7 @@ class Article extends Model
     protected $primaryKey = 'article_id';
 
     // 指定允许批量赋值的字段
-    protected $fillable = ['title', 'desc', 'url', 'img_url'];
+    protected $fillable = ['title', 'desc', 'url', 'img_url', 'type'];
 
     // 自动维护时间戳
     public $timestamps = true;

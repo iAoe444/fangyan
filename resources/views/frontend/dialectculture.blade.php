@@ -12,17 +12,22 @@
 'dialect_culture'@stop
 
 @section('content')
-<div class="item_area">
-    @foreach($articles as $article)
-    <div class="item">
-        <a href="{{ url('dialectculture/article?wxUrl=') }}{{ $article->url }}"><img src="{{ asset($article->img_url) }}"> </a>
-        <div class="title_text">
-            <div>
-                <a class="title" href="{{ url('dialectculture/article?wxUrl=') }}{{ $article->url }}">{{ $article->title }}</a>
-            </div>
-            <div class="desc">{{ $article->desc }}</div>
-        </div>
+<div class="html">
+    <h1 class="h_title">方言文化</h1>
+    <div class="item_area">
+        <ul class="card_area">
+            @foreach($articles as $article)
+            <li class="card">
+                <a href="{{ url('dialectculture/article?wxUrl=') }}{{ $article->url }}">
+                    <img src="{{ asset($article->img_url) }}" class="image">
+                    <div class="info">
+                        <div class="title">{{ $article->title }}</div>
+                        <div class="desc">{{ $article->desc }}</div>
+                    </div>
+                </a>
+            </li>
+            @endforeach
+        </ul>
     </div>
-    @endforeach
 </div>
 @stop

@@ -22,8 +22,8 @@ class FrontEndController extends Controller
     public function dialectculture()
     {
         //查询所有的文章
-        $articles = Article::all();
-        return view('frontend.dialectculture',['articles' => $articles]);
+        $articles = Article::orderBy('updated_at', 'desc')->get();
+        return view('frontend.dialectculture', ['articles' => $articles]);
     }
 
     public function homelocation()
@@ -35,7 +35,7 @@ class FrontEndController extends Controller
     public function lifescene()
     {
         $scenes = LifeScene::all();
-        return view('frontend.lifescene')->with('scenes',$scenes);
+        return view('frontend.lifescene')->with('scenes', $scenes);
     }
 
     public function dialecttest()
@@ -51,16 +51,27 @@ class FrontEndController extends Controller
     public function article(Request $request)
     {
         // 获取微信文章的url，然后把url放在iframe里面
-        if($request->has('wxUrl')){
+        if ($request->has('wxUrl')) {
             $wxUrl = $request->input('wxUrl');
-            return view('frontend.article',['wxUrl' => $wxUrl]);
+            return view('frontend.article', ['wxUrl' => $wxUrl]);
+        }
+    }
+
+    // 方言文化-视频
+    public function video(Request $request)
+    {
+        // id
+        if ($request->has('id')) {
+            $id = $request->input('id');
+            $video = Article::find($id);
+            return view('frontend.video', ['video' => $video]);
         }
     }
 
     //获取公众号文章
     public function wxarticle(Request $request)
     {
-        if($request->has('wxUrl')){
+        if ($request->has('wxUrl')) {
             $wxUrl = $request->input('wxUrl');
             $html = file_get_contents($wxUrl);
             $html = str_replace("data-src", 'src', $html);
@@ -72,7 +83,7 @@ class FrontEndController extends Controller
                 },
                 $html
             );
-            
+
             //用来获取高度传递给iframe的
             $appendMsg = "
             <iframe id=\"c_iframe\"  height=\"0\" width=\"0\"  src=\"http://lab.iaoe.xyz/fanyan/public/agent.html\" style=\"display:none\" ></iframe>
@@ -85,7 +96,7 @@ class FrontEndController extends Controller
                 })();
             </script>";
             $html = $html . $appendMsg;
-    
+
             header('content-Type: text/html;charset=utf-8');
             header('HTTP/1.1 200 Ok');
             echo $html;

@@ -6,7 +6,7 @@
 }
 
 .title_text {
-	margin-top: 100px;
+	margin-top: 150px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -14,14 +14,14 @@
 }
 
 .title_en {
-	font-size: 30px;
+	font-size: 40px;
 	color: white;
 	font-weight: bold;
 	margin: 0px;
 }
 
 .title_ch {
-	font-size: 17px;
+	font-size: 20px;
 	color: #ffffffc7;
 	margin-top: 10px;
 }
@@ -49,14 +49,20 @@
 }
 
 .scene_area {
-	margin-top: 100px;
 	display: flex;
+	justify-content: center;
+	width: 100%;
+	background: white;
+	position: absolute;
+	top: 370px;
+	bottom: 0px;
 }
 
 .scene {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 50px;
 	margin-right: 70px;
 	margin-left: 70px;
 	position: relative;

@@ -1,13 +1,27 @@
+.html {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .item_area {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 50px;
-	margin-bottom: 80px;
-
+	background-color: white;
 }
-
+.card_area{
+	width: 70%;
+	overflow:hidden;zoom:1
+}
+.item_area a{
+	text-decoration:none
+}
+.card:hover{
+	text-decoration:none;
+	box-shadow: 5px 2px 6px rgba(0, 0, 0, 0.356);
+}
 .item {
 	display: flex;
 	width: 1000px;
@@ -37,7 +51,7 @@
 	font-weight: 600;
 	line-height:1.6;
 	color:rgba(0, 0, 0, .7);
-	font-size:20px;
+	font-size:15px;
 	flex:none;
 }
 
@@ -50,13 +64,37 @@
 	border-radius: 50%;
 }
 .desc {
-	width: 700px;
+	width: 200x;
 	margin-top: 10px;
-	font-size: 10px;
+	font-size: 12px;
 	color: rgba(0, 0, 0, .5);
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 1; /*规定最多显示两行*/
+}
+.image{
+	height: 280px;
+	width: 280px;
+}
+.card{
+	width: 280px;
+	display: block;
+	float: left;
+	margin-right: 40px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	box-shadow: 5px 2px 6px rgba(0, 0, 0, 0.123);
+}
+.info{
+	padding: 20px 28px;
+	background: white;
+}
+.h_title{
+	color: white;
+	font-size: 60px;
+	width: 70%;
+	margin-top: 70px;
+	margin-bottom: 70px;
 }

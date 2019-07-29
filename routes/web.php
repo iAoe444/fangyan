@@ -20,6 +20,7 @@ Route::get('index',['uses'=>'FrontEndController@index']);
 Route::get('dialectculture',['uses'=>'FrontEndController@dialectculture']);
 Route::group(['prefix' => 'dialectculture'],function(){
     Route::get('article',['uses'=>'FrontEndController@article']);
+    Route::get('video',['uses'=>'FrontEndController@video']);
     Route::get('wxarticle',['uses'=>'FrontEndController@wxarticle']);
     Route::get('image',['uses'=>'FrontEndController@image']);
 });

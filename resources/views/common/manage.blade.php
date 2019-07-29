@@ -30,8 +30,8 @@
         <div class="col-md-3">
             @section('left-menu')
             <div class="list-group">
-                <a href="{{ url('manage/article') }}" class="list-group-item {{ strstr(Request::getPathInfo(),'/manage/article')?'active':'' }}">文章列表</a>
-                <a href="{{ url('manage/scene') }}" class="list-group-item {{ strstr(Request::getPathInfo(),'/manage/scene')?'active':'' }}">场景列表</a>
+                <a href="{{ url('manage/article') }}" class="list-group-item {{ strstr(Request::getPathInfo(),'/manage/article')?'active':'' }}">方言文化</a>
+                <a href="{{ url('manage/scene') }}" class="list-group-item {{ strstr(Request::getPathInfo(),'/manage/scene')?'active':'' }}">生活场景</a>
                 <a href="{{ url('manage/feedback') }}" class="list-group-item {{ strstr(Request::getPathInfo(),'/manage/feedback')?'active':'' }}">留言列表</a>
             </div>
             @show
@@ -52,7 +52,7 @@
 @section('footer')
 <div class="jumbotron" style="margin:0;">
     <div class="container">
-        <span>  @2019 fanyan</span>
+        <a href="{{ url('index') }}">@2019 fangyan</a>
     </div>
 </div>
 @show

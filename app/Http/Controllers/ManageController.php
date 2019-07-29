@@ -16,21 +16,21 @@ class ManageController extends Controller
 
     public function article()
     {
-        $articles = Article::paginate(10);
+        $articles = Article::orderBy('updated_at', 'desc')->paginate(10);
         return view('manage.article')->with('articles',$articles);
     }
 
     public function scene()
     {
         // 分页，每页是10个记录
-        $scenes = LifeScene::paginate(10);
+        $scenes = LifeScene::orderBy('updated_at', 'desc')->paginate(10);
         return view('manage.scene')->with('scenes',$scenes);
     }
 
     public function feedback()
     {
         // 分页，每页是10个记录
-        $feedbacks = Feedback::orderBy('created_at', 'desc')->paginate(10);
+        $feedbacks = Feedback::orderBy('updated_at', 'desc')->paginate(10);
         return view('manage.feedback')->with('feedbacks',$feedbacks);
     }
 }
